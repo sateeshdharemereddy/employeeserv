@@ -21,11 +21,11 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 
-	@Autowired
 	private EmployeeRepository employeeRepository;
 
 	private ModelMapper modelMapper;
 
+	@Autowired
 	public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
 		this.employeeRepository = employeeRepository;
 		modelMapper = new ModelMapper();

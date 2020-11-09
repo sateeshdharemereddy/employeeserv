@@ -20,8 +20,12 @@ import lombok.extern.slf4j.Slf4j;
 @RestController
 public class EmployeeResourceImpl implements EmployeeResource {
 
-	@Autowired
 	private EmployeeService employeeService;
+
+	@Autowired
+	public EmployeeResourceImpl(EmployeeService employeeService) {
+		this.employeeService = employeeService;
+	}
 
 	@Override
 	public ResponseEntity<Employee> employeeGetById(String id) {
